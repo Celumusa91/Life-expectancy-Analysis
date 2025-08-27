@@ -171,9 +171,14 @@ View(sample_data)
    - South America is 4.22 years higher than Africa.
    - Adult mortality is a strong negative predictor of Life expectancy. People living in all other regions have signifiacntly higher life expectancy compared to Africa. Region and Mortality together explain a very large portion (93%) of Life expectancy variation globally.
 
-4. 
+4. How do BMI and Alcohol consumption together affect life expectancy?
+   - For each unit increase in BMI, Life expectancy inreases by 2.2 years.
+   - For each litre increase in Alcohol consumption, Life expectancy increases by 0.62 years.
+   - Both BMI and Alcohol consumption are statistically significant positive predictors of Life expectancy in the model.
+   - BMI has a strong effect than Alcohol consumption.
+   - The model explains about 42% (Rsquared = 0.417)of the variation in Life expectancy.
 
-     
+ 
    
 
      
