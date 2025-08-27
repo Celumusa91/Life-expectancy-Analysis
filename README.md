@@ -148,6 +148,9 @@ View(sample_data)
      par(mfrow = c(2, 2))
      plot(model_imp)
      ```
+### Results and Findings
+1. What is the relationship between Alcohol consumption and Life expectancy across countries?
+   - The scatter plot shows that there is a positive correlation between Alcohol consumption and Life expectancy across different world regions. As alcohol consumption also increases, life expectancy also tends to increase. 
 
      
    
