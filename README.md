@@ -189,7 +189,12 @@ View(sample_data)
    - Hepatitis_B | 0.0208 | < 0.0256 |* Small but significant positive impact on Life expectancy
    - The model demonstrates the combined impactof health indicators in Life expectancy and is very strong.
 
-   - 
+     - Infant deaths and Adult mortality are by far the most important predictors of Life expectancy. They contribute the most to the predictive power of the model.
+     - HIVIncidence and BMI have minor but nitiable influence.
+     - Alcohol consumption has very low importance.
+     - Hepatitis_B coverage shows no importance in this model.
+
+### Recommendations
    
 
      
