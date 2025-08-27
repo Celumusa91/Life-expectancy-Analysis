@@ -67,3 +67,55 @@ View(sample_data)
               y = "Life expectancy (years)")+
          theme_minimal()
      ```
+ 2. How does the prevalence of Polio or Hepatisi B vaccination influence life expectancy?
+    - correlation between vaccinations and Life expectancy
+      ```R
+      cor(sample_data[, c("Polio", "HepatitisB",
+                    "LifeExpectancy")])
+      ```
+    - Scatter plot with a regression line (Polio and Life Expectancy)
+      ```R
+      sample_data %>% 
+         ggplot(aes(Polio, LifeExpectancy))+
+         geom_point(aes(color = Region))+
+         geom_smooth(method = "lm", se = T, color = "blue")+
+         labs(title = "Polio vaccine Rate Vs Life Expectancy",
+              x = "Polio Vaccine (%)",
+              y = "Life Expectancy (years)")+
+         theme_minimal()
+      ```
+    - Scatter plot with a regression line (Hepatitis_B and Life Expectancy)
+       ```R
+       sample_data %>% 
+        ggplot(aes(HepatitisB, LifeExpectancy))+
+        geom_point(aes(color = Region))+
+        geom_smooth(method = "lm", se = T, color = "red")
+        ```
+ 3. To what extent does adult mortality contribute to the variations in life expectancy by Region?
+    - Descriptive statistics
+      ```R
+      summary(sample_data$AdultMortality)
+      ```
+    - Scatter plot
+      ```R
+      sample_data %>% 
+         ggplot(aes(AdultMortality, LifeExpectancy))+
+         geom_point(aes(color = Region))+
+         geom_smooth(method = "lm", se = F, color = "blue")+
+         labs(title = "Adult Mortality Vs Life expectancy",
+              x = "Adult Mortality (per 1000)",
+              y = "Life expectancy (years)")+
+         theme_minimal()
+      ```
+    - correlation analysis
+      ```R
+      cor(sample_data$AdultMortality, sample_data$LifeExpectancy)
+      ```
+    - Modelling (linear model)
+     ```R
+      model <- lm(LifeExpectancy ~ AdultMortality + Region, data = sample_data)
+      summary(model)
+     ```
+     
+
+   
