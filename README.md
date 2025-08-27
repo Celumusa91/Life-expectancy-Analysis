@@ -144,6 +144,9 @@ View(sample_data)
      set.seed(100)
      model_imp <- train(LifeExpectancy ~ ., data = healthInc_data, model = "lm")
      varImp(model_imp)
+
+     par(mfrow = c(2, 2))
+     plot(model_imp)
      ```
 
      
