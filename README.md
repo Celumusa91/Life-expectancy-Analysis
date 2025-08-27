@@ -150,7 +150,28 @@ View(sample_data)
      ```
 ### Results and Findings
 1. What is the relationship between Alcohol consumption and Life expectancy across countries?
-   - The scatter plot shows that there is a positive correlation between Alcohol consumption and Life expectancy across different world regions. As alcohol consumption also increases, life expectancy also tends to increase. African countries tend to have lower life expectancy and lower alcohol consumption. European Union and Rest of Europe show high alcohol consumption with relatively high life expectancy. 
+   - The scatter plot shows that there is a positive correlation between Alcohol consumption and Life expectancy across different world regions. As alcohol consumption also increases, life expectancy also tends to increase. African countries tend to have lower life expectancy and lower alcohol consumption. European Union and Rest of Europe show high alcohol consumption with relatively high life expectancy.
+
+2. How does the prevalence of Polio or Hepatisi B vaccination influence life expectancy?
+   - Polio vaccination is possitively associated with life expectancy.
+   - Countries with higher Polio vaccination rates tend to have higher life expectancy.
+   - The correlation of 0.682 indicates a moderate to strong relationship.
+   - Hepatitis B also has a strong relationship, but weaker than Polio. Correlation of 0.452, indicates a moderate positive correlation.
+
+3. To what extent does adult mortality contribute to the variations in life expectancy by Region?
+   - Expected Life expectancy value is 78.72 (79 years) when Adult mortality is 0 in referrence region Africa.
+   - As Adult mortality increases by 1, Life expectancy decreases by 0.065 years.
+   - Life expectancy in Asia is 1.93 years higher than the reference region, Africa.
+   - Central America/Caribbean is 4.42 years Life expectancy higher than Africa.
+   - European Union is 5.82 years higher than Africa.
+   - Middle East is 5.53 years higher than Africa.
+   - North America is 2.91 years higher than Africa.
+   - Oceania is 5.71 years higher than Africa.
+   - Rest of Europe is 4.68 years higher than Africa.
+   - South America is 4.22 years higher than Africa.
+   - Adult mortality is a strong negative predictor of Life expectancy. People living in all other regions have signifiacntly higher life expectancy compared to Africa. Region and Mortality together explain a very large portion (93%) of Life expectancy variation globally.
+
+4. 
 
      
    
