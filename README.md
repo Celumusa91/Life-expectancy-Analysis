@@ -49,3 +49,21 @@ sample_data <- data %>%
                 InfantDeaths, Region, Country) 
 View(sample_data)
 ```
+### Data Analysis
+1. What is the relationship between Alcohol consumption and Life expectancy across countries?
+   - Descriptive statistics
+     ```R
+     summary(sample_data$AlcoholConsumption)
+     summary(sample_data$LifeExpectancy)
+     ```
+   - Scatter plot with a regression line
+     ```R
+     sample_data %>% 
+         ggplot(aes(AlcoholConsumption, LifeExpectancy))+
+         geom_point(aes(color = Region))+
+         geom_smooth(method = "lm", se = T, color = "blue")+
+         labs(title = "Alcohol Consumption Vs Life expectancy",
+              x = "Alcohol Cunsumption (Litres per capita)",
+              y = "Life expectancy (years)")+
+         theme_minimal()
+     ```
