@@ -150,7 +150,7 @@ View(sample_data)
      ```
 ### Results and Findings
 1. What is the relationship between Alcohol consumption and Life expectancy across countries?
-   - The scatter plot shows that there is a positive correlation between Alcohol consumption and Life expectancy across different world regions. As alcohol consumption also increases, life expectancy also tends to increase. 
+   - The scatter plot shows that there is a positive correlation between Alcohol consumption and Life expectancy across different world regions. As alcohol consumption also increases, life expectancy also tends to increase. African countries tend to have lower life expectancy and lower alcohol consumption. European Union and Rest of Europe show high alcohol consumption with relatively high life expectancy. 
 
      
    
