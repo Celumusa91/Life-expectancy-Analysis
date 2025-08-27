@@ -178,7 +178,18 @@ View(sample_data)
    - BMI has a strong effect than Alcohol consumption.
    - The model explains about 42% (Rsquared = 0.417)of the variation in Life expectancy.
 
- 
+5. What combination of health indicators best predicts life expectancy using multiple regression analysis?
+   - The model expalins 97.93% of the variability in Life expectancy.
+   - 87.15 years baseline Life expectancy when all predictors are 0
+   - BMI | -0.11 | < 0.0769 |. marginal |Has slight negative effect, not statistically strong.
+   - The coefficient of| -0.15 | < 2e-16 |** |suggest higher infant strongly reduce life expectancy.
+   - Each increase in Adult mortality reduces Life expectancy by ~ 2.05 years, | -2.05 | < 2e-16 |** |.
+   - Alcohol consumption | 0.15 |  3.02e-16 |*** | Slight positive effect, more Alcohol consumption linked with higher Life expectancy
+   - HIVIncidence | -0.16 | < 2e-16 |** | Higher HIVIncidences reduces Life expectancy.
+   - Hepatitis_B | 0.0208 | < 0.0256 |* Small but significant positive impact on Life expectancy
+   - The model demonstrates the combined impactof health indicators in Life expectancy and is very strong.
+
+   - 
    
 
      
