@@ -116,6 +116,39 @@ View(sample_data)
       model <- lm(LifeExpectancy ~ AdultMortality + Region, data = sample_data)
       summary(model)
      ```
+4. How do BMI and Alcohol consumption together affect life expectancy?
+   - Correlation matrix
+     ```R
+     cor(sample_data[, c("BMI", "AlcoholConsumption",
+                    "LifeExpectancy")])
+     ```
+   - Modelling (Multiple linear moddel)
+     ```R
+     model2 <- lm(LifeExpectancy ~ BMI + AlcoholConsumption, data = sample_data)
+     summary(model2)
+     ```
+5. What combination of health indicators best predicts life expectancy using multiple regression analysis?
+   - selecting health indicators for a new sample data set (healthInc_data)
+     ```R
+     healthInc_data <- sample_data %>% 
+         select(LifeExpectancy, BMI, InfantDeaths, AdultMortality,
+                AlcoholConsumption, InfantDeaths, HIVincidence, HepatitisB)
+     ```
+   - Fitting a multiple linear regression model (model3)
+     ```R
+     model3 <- lm(LifeExpectancy ~ ., data = healthInc_data)
+     summary(model3)
+     ```
+   - Variable Importance analysis
+     ```R
+     set.seed(100)
+     model_imp <- train(LifeExpectancy ~ ., data = healthInc_data, model = "lm")
+     varImp(model_imp)
+     ```
+
+     
+   
+
      
 
    
