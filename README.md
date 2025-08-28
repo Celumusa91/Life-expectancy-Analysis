@@ -195,8 +195,15 @@ View(sample_data)
      - Hepatitis_B coverage shows no importance in this model.
 
 ### Recommendations
-   
 
+Based on the analysis, I recommend the following actions:
+ -Investing on means to reduce infant and adult mortality can have the greates impact on improving Life expectancy globally.
+ - Focus on fighting the spread of HIV incidence as it also reduce life expectancy.
+
+### Limitations
+
+This analysis was limited by:
+ - Dataset was clean, so I could not showcase data cleaning skills.
      
 
    
