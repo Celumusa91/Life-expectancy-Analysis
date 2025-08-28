@@ -197,13 +197,14 @@ View(sample_data)
 ### Recommendations
 
 Based on the analysis, I recommend the following actions:
- -Investing on means to reduce infant and adult mortality can have the greates impact on improving Life expectancy globally.
- - Focus on fighting the spread of HIV incidence as it also reduce life expectancy.
+ - It is very important to reduce early mortality and improving maternal mortality and child health as key strategies to raise Life expectacy worldwide.
+ - Targeted interventions to reduce deaths, especially in infancy and adulthood can do well in improving the longevity across countries.
 
-### Limitations
+### Conclussion
 
-This analysis was limited by:
- - Dataset was clean, so I could not showcase data cleaning skills.
+This analysis explored the impact of various health and social factors on global Life expectancy using WHO data. The multiple linear regression and the variable importance models revealed that nfant deaths and adult mortality are the strongest negative predictors of life expectancy, indicating that countries with higher rates in these areas tend to have significantly lower life spans.
+
+
      
 
    
