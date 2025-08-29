@@ -204,8 +204,7 @@ Based on the analysis, I recommend the following actions:
 
 This analysis explored the impact of various health and social factors on global Life expectancy using WHO data. The multiple linear regression and the variable importance models revealed that nfant deaths and adult mortality are the strongest negative predictors of life expectancy, indicating that countries with higher rates in these areas tend to have significantly lower life spans.
 
-
-
+To view analysis report [see here](https://celumusa91.github.io/Life-expectancy-Analysis/Life-expectancy-analysis.html)
      
 
    
