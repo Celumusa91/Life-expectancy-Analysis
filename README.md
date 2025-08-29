@@ -4,6 +4,13 @@
 ### Table of Contents
 
 - [Project Overview](#project-overview)
+- [Data Source](#data-source)
+- [Tools](#tools)
+- [Data Cleaning and Preparation](#data-cleaning-and-preparation)
+- [Data Analysis](#data-analysis)
+- [Results and Findings](#results-and-findings)
+- [Recommendations](#recommendations)
+- [Conclusion](#conclusion)
 
 ### Project Overview
 
@@ -11,7 +18,7 @@ This data analysis project explores how various health and social indicators imp
 
 ### Data Source
 
-Life Expectancy (WHO):The data used for this analysisis the "Life_Expectancy_data.csv" file, downloaded from (https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who). The objective is to demostrate dta analysis skills using R.
+Life Expectancy (WHO):The data used for this analysisis the "Life_Expectancy_data.csv" file, downloaded from (https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who). The objective is to demostrate data analysis skills using R.
 
 ### Tools
 
@@ -204,7 +211,7 @@ Based on the analysis, I recommend the following actions:
  - It is very important to reduce early mortality and improving maternal mortality and child health as key strategies to raise Life expectacy worldwide.
  - Targeted interventions to reduce deaths, especially in infancy and adulthood can do well in improving the longevity across countries.
 
-### Conclussion
+### Conclusion
 
 This analysis explored the impact of various health and social factors on global Life expectancy using WHO data. The multiple linear regression and the variable importance models revealed that nfant deaths and adult mortality are the strongest negative predictors of life expectancy, indicating that countries with higher rates in these areas tend to have significantly lower life spans.
 
