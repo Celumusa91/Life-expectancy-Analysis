@@ -1,0 +1,167 @@
+---
+title: "Global Life expectancy Analysis"
+author: "Celumusa Fakudze"
+date: "2025-08-25"
+output: html_document
+---
+
+# Data Importing
+
+```{r}
+library(readr)
+data <- read_csv("C:\\Users\\Fakudze\\Desktop\\archive (23).zip")
+View(data)
+```
+
+# Data Examination 
+
+```{r}
+library(dplyr)
+library(ggplot2)
+colSums(is.na(data))
+glimpse(data)
+```
+
+# Data extraction and cleaning
+
+```{r}
+data <- data %>% 
+         rename(LifeExpectancy =  Life_expectancy,
+                HepatitisB = Hepatitis_B,
+                AdultMortality = Adult_mortality,
+                InfantDeaths = Infant_deaths,
+                Under5deaths = Under_five_deaths,
+                AlcoholConsumption = Alcohol_consumption,
+                HIVincidence = Incidents_HIV)
+```
+
+
+```{r}
+sample_data <- data %>% 
+         select(LifeExpectancy, Population_mln, GDP_per_capita,
+                HIVincidence, Polio, BMI, HepatitisB,
+                AlcoholConsumption, AdultMortality,
+                InfantDeaths, Region, Country) 
+View(sample_data)
+```
+
+# Data Analysis 
+## What is the relationship between Alcohol consumption and Life expectancy across countries?
+
+Descriptive statistics
+```{r}
+summary(sample_data$AlcoholConsumption)
+summary(sample_data$LifeExpectancy)
+```
+
+Scatter plot with a regression line
+```{r}
+sample_data %>% 
+         ggplot(aes(AlcoholConsumption, LifeExpectancy))+
+         geom_point(aes(color = Region))+
+         geom_smooth(method = "lm", se = T, color = "blue")+
+         labs(title = "Alcohol Consumption Vs Life expectancy",
+              x = "Alcohol Cunsumption (Litres per capita)",
+              y = "Life expectancy (years)")+
+         theme_minimal()
+```
+
+## How does the prevalence of Polio or Hepatisi B vaccination influence life expectancy?
+
+correlation between vaccinations and Life expectancy
+```{r}
+cor(sample_data[, c("Polio", "HepatitisB",
+                    "LifeExpectancy")])
+```
+
+```{r}
+sample_data %>% 
+         ggplot(aes(Polio, LifeExpectancy))+
+         geom_point(aes(color = Region))+
+         geom_smooth(method = "lm", se = T, color = "blue")+
+         labs(title = "Polio vaccine Rate Vs Life Expectancy",
+              x = "Polio Vaccine (%)",
+              y = "Life Expectancy (years)")+
+         theme_minimal()
+```
+
+```{r}
+sample_data %>% 
+         ggplot(aes(HepatitisB, LifeExpectancy))+
+         geom_point(aes(color = Region))+
+         geom_smooth(method = "lm", se = T, color = "red")
+```
+
+## To what extent does adult mortality contribute to the variations in life expectancy by Region?
+
+```{r}
+summary(sample_data$AdultMortality)
+
+sample_data %>% 
+         ggplot(aes(AdultMortality, LifeExpectancy))+
+         geom_point(aes(color = Region))+
+         geom_smooth(method = "lm", se = F, color = "blue")+
+         labs(title = "Adult Mortality Vs Life expectancy",
+              x = "Adult Mortality (per 1000)",
+              y = "Life expectancy (years)")+
+         theme_minimal()
+```
+
+## Correlation check
+
+```{r}
+cor(sample_data$AdultMortality,
+    sample_data$LifeExpectancy)
+```
+
+Model Illustration
+```{r}
+
+model <- lm(LifeExpectancy ~ AdultMortality + Region, data = sample_data)
+summary(model)
+
+model1 <- lm(LifeExpectancy ~ AdultMortality + Region, data = sample_data)
+summary(model1)
+```
+
+## How do BMI and Alcohol consumption together affect life expectancy?
+
+correlation matrix
+```{r}
+cor(sample_data[, c("BMI", "AlcoholConsumption",
+                    "LifeExpectancy")])
+
+model2 <- lm(LifeExpectancy ~ BMI + AlcoholConsumption, data = sample_data)
+summary(model2)
+```
+
+## What combination of health indicators best predicts life expectancy using multiple regression analysis?
+
+selecting health indicators
+```{r}
+healthInc_data <- sample_data %>% 
+         select(LifeExpectancy, BMI, InfantDeaths, AdultMortality,
+                AlcoholConsumption, InfantDeaths, HIVincidence, HepatitisB)
+```
+
+## Fitting a multiple linear regression model
+```{r}
+model3 <- lm(LifeExpectancy ~ ., data = healthInc_data)
+summary(model3)
+```
+
+## Variable importance
+```{r}
+library(caret)
+library(randomForest)
+set.seed(100)
+
+model_imp <- train(LifeExpectancy ~ ., data = healthInc_data,
+                   model = "lm")
+
+varImp(model_imp)
+
+par(mfrow = c(2, 2))
+plot(model_imp)
+```
+
