@@ -4,6 +4,7 @@
 ![Alt text](https://github.com/Celumusa91/Life-expectancy-Analysis/blob/4df955cd61761184db384eada98d4a48fb087b91/Life_expectancy_Photo.jpg)
 
 ### Table of Contents
+---
 
 - [Project Overview](#project-overview)
 - [Data Source](#data-source)
@@ -15,14 +16,17 @@
 - [Conclusion](#conclusion)
 
 ### Project Overview
+---
 
 This data analysis project explores how various health and social indicators impact life expectancy across countries. It also seeks to quantify the most influential indicators to inform evidence-based health planning and resource allocation.
 
 ### Data Source
+---
 
 Life Expectancy (WHO):The data used for this analysisis the "Life_Expectancy_data.csv" file, downloaded from (https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who). The objective is to demostrate data analysis skills using R.
 
 ### Tools
+---
 
 R language
  - library(readr) for loading data
@@ -31,6 +35,7 @@ R language
  - library(caret) for analyzing feature importance
 
 ### Data Cleaning and Preparation
+---
  - Data loading and examination
 ```R
 library(readr)
@@ -63,6 +68,8 @@ sample_data <- data %>%
 View(sample_data)
 ```
 ### Data Analysis
+---
+
 1. What is the relationship between Alcohol consumption and Life expectancy across countries?
    - Descriptive statistics
      ```R
@@ -162,6 +169,8 @@ View(sample_data)
      plot(model_imp)
      ```
 ### Results and Findings
+---
+
 1. What is the relationship between Alcohol consumption and Life expectancy across countries?
    - The scatter plot shows that there is a positive correlation between Alcohol consumption and Life expectancy across different world regions. As alcohol consumption also increases, life expectancy also tends to increase. African countries tend to have lower life expectancy and lower alcohol consumption. European Union and Rest of Europe show high alcohol consumption with relatively high life expectancy.
 
@@ -208,12 +217,14 @@ View(sample_data)
      - Hepatitis_B coverage shows no importance in this model.
 
 ### Recommendations
+---
 
 Based on the analysis, I recommend the following actions:
  - It is very important to reduce early mortality and improving maternal mortality and child health as key strategies to raise Life expectacy worldwide.
  - Targeted interventions to reduce deaths, especially in infancy and adulthood can do well in improving the longevity across countries.
 
 ### Conclusion
+---
 
 This analysis explored the impact of various health and social factors on global Life expectancy using WHO data. The multiple linear regression and the variable importance models revealed that nfant deaths and adult mortality are the strongest negative predictors of life expectancy, indicating that countries with higher rates in these areas tend to have significantly lower life spans.
 
@@ -221,5 +232,7 @@ To view analysis report [see here](https://celumusa91.github.io/Life-expectancy-
 
 To download my R code [download here](https://celumusa91.github.io/Life-expectancy-Analysis/Life%20expectancy%20analysis.Rmd)
      
+💻
 
+😄
    
