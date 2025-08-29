@@ -1,6 +1,8 @@
 # Global Life-expectancy-Analysis Project
 ## Statistical analysis on factors influencing life expectancy
 
+![Alt text](https://github.com/Celumusa91/Life-expectancy-Analysis/blob/4df955cd61761184db384eada98d4a48fb087b91/Life_expectancy_Photo.jpg)
+
 ### Table of Contents
 
 - [Project Overview](#project-overview)
