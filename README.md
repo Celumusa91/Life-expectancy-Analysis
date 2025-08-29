@@ -1,6 +1,10 @@
 # Global Life-expectancy-Analysis Project
 ## Statistical analysis on factors influencing life expectancy
 
+### Table of Contents
+
+- [Project Overview](#project-overview)
+
 ### Project Overview
 
 This data analysis project explores how various health and social indicators impact life expectancy across countries. It also seeks to quantify the most influential indicators to inform evidence-based health planning and resource allocation.
